@@ -5,13 +5,13 @@ one:
   status: MyString
   start_date: MyString
   end_date: MyString
-  references: 
-  references: 
+  car: one
+  user: one
 
 two:
   message: MyText
   status: MyString
   start_date: MyString
   end_date: MyString
-  references: 
-  references: 
+  car: two
+  user: two
