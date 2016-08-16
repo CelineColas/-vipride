@@ -1,3 +1,3 @@
-class CarsController < ApplicationController
+class Dashboard::CarsController < ApplicationController
 
 end
