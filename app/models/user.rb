@@ -6,7 +6,8 @@ class User < ApplicationRecord
   has_many :cars
   has_many :bookings # as renter
   has_many :received_bookings, through: :cars, source: :bookings # as owner
+  has_attachment :photo
 
-  validates :name, presence: true
-  validates :address, presence: true
+  validates :name, presence: true, on: :update
+  validates :address, presence: true, on: :update
 end

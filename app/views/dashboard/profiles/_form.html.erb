@@ -1,0 +1,21 @@
+<%= simple_form_for(@user, url: dashboard_profile_path) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li> Invalid input </li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- [...] all the fields -->
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.input :photo, as: :attachinary %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.submit %>
+<% end %>
