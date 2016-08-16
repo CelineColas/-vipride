@@ -1,15 +1,6 @@
 class BookingsController < ApplicationController
   # before_action :set_booking, only: [:show, :edit, :update]
 
-  # def index
-  #   @bookings = Booking.all
-  # end
-
-  # def show
-  #   @dose = Dose.new
-  #   @ingredients = Ingredient.all
-  # end
-
   def new
     @booking = Booking.new
   end
@@ -20,18 +11,6 @@ class BookingsController < ApplicationController
     redirect_to dashboard_bookings_path
   end
 
-  # def edit
-  # end
-
-  # def update
-  #   @booking.update(booking_params)
-  #   redirect_to bookings_path
-  # end
-
-  # def destroy
-  #   @booking.destroy
-  #   redirect_to bookings_path
-  # end
 
   private
   # def set_booking
