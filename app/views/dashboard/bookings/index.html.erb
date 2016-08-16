@@ -1,0 +1,25 @@
+<% if @booking %>
+
+<div class= "bookingslist">
+  <div class= "bookingstitle">
+  <h3>Bookings list</h3>
+  </div>
+  <ul>
+    <%  @booking.dashboard.each do |booking| %>
+    <p>
+      <%= booking.dashboard.car_id %>  <%= booking.dashboard.user_id  %> <%= booking.dashboard.date_start %>  <%= booking.dashboard.date_end %> <%= booking.dashboard.message %>
+      <%link_to “Approve”, approve_dashboard_booking_path(booking) %>
+      <%link_to “Reject”, reject_dashboard_booking_path(booking) %>
+  <% end %>
+  </ul>
+</div>
+
+<% else %>
+
+  <h3> You have no bookings yet </h3>
+
+<% end %>
+
+<div>
+    <%= link_to 'back', dashboard_profile_path %>
+</div>
