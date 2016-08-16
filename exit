@@ -1,0 +1,32 @@
+[33mcommit 195143672072737a3042c08f296fe5c505fa220d[m
+Merge: 78e5b25 3e9cdd5
+Author: Cedric de Radzitzky <cderadzitzky@gmail.com>
+Date:   Tue Aug 16 13:41:14 2016 +0200
+
+    Merge pull request #1 from CelineColas/add-booking-model
+    
+    Add booking model
+
+[33mcommit 3e9cdd57d823680d9cdb8df031505a68168bab7d[m
+Author: Celine Colas <colasceline88@gmail.com>
+Date:   Tue Aug 16 13:26:04 2016 +0200
+
+    Good version of all the folders
+
+[33mcommit 1cf1f4b60f59b1e92f3b98bb1c485e1234d027ab[m
+Author: Celine Colas <colasceline88@gmail.com>
+Date:   Tue Aug 16 10:05:45 2016 +0200
+
+    Generate booking model once again
+
+[33mcommit 358bbfe07064d7fe13942539a583ca5e212e581f[m
+Author: Celine Colas <colasceline88@gmail.com>
+Date:   Tue Aug 16 08:55:17 2016 +0200
+
+    Generate bookin model
+
+[33mcommit 78e5b25e0c808a5d2587a321f6cd9f4b993359f0[m
+Author: Celine Colas <colasceline88@gmail.com>
+Date:   Mon Aug 15 17:16:30 2016 +0200
+
+    Initial commit with minmal template from https://github.com/lewagon/rails-templates
