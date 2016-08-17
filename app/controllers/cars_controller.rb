@@ -3,7 +3,11 @@ class CarsController < ApplicationController
   before_action :find_car, only: [:show]
 
   def index
-    @cars = Car.all
+    if params[:brand]
+      @cars = Car.where("brand ILIKE ?", "%#{params[:brand]}%")
+    else
+      @cars = Car.all
+    end
     # cars GET    /cars(.:format)                           cars#index
   end
 
@@ -12,7 +16,8 @@ class CarsController < ApplicationController
   end
 
   private
-    def find_car
-      @car = Car.find(params[:id])
-    end
+  def find_car
+    @car = Car.find(params[:id])
+  end
 end
+
