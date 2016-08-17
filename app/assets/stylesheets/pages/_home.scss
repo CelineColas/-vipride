@@ -3,13 +3,23 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 .search-bar {
-  flex: 0 1 300px;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 10px;
-  position: relative;
+  padding: 30 30px;
+  margin: 50px;
 }
 
+.search-bar > input {
+  margin: 10px;
+}
+
+input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 126px;
+}
+
+.wrapper-top {
+  background-image: url("images/847298-luxury-wallpaper.jpg");
+  background-size: cover;
+  height:300px;
+}
 .cards-wrapper {
   padding: 60px 0;
   background-color: #F4F4F4;
