@@ -2,3 +2,46 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.search-bar {
+  flex: 0 1 300px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  position: relative;
+}
+
+.cards-wrapper {
+  padding: 60px 0;
+  background-color: #F4F4F4;
+  background-size: cover;
+  display: flex;
+  height: 900px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 350px;
+  border-radius: 9px;
+  color: white;
+  margin: 0 auto;
+  background-size: cover;
+  flex: 0 1 auto;
+}
+
+  .card-name {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+  display: block;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  display: block;
+}
