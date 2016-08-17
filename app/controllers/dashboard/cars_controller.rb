@@ -4,8 +4,8 @@ def index
   @cars = current_user.cars
 end
 
-def show
-end
+# def show
+# end
 
 def new
   @car = Car.new
@@ -20,8 +20,11 @@ def create
 end
 
 
+private
 
-
+  def car_params
+    params.require(:car).permit(:brand, :model, :color, :description, :photo)
+  end
 
 end
 

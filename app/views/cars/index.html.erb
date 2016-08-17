@@ -3,21 +3,24 @@
 <div class="text-center"> <!-- to define in CSS ! -->
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
- <h2>Please find herebelow all the cars for the results : xxx - yyy - zzz -> FILTER </h2>
-<!-- JQUERY stuff here -> Filter on bar search from home page!!! -->
+ <h2>Please find herebelow all the cars for the results requested :  </h2>
+
      <table class= "table">
          <ol>
            <% @cars.each do |car| %>
-                <%#= cl_image_tag car.photo, height: 20, width: 20, crop: :fill %>
+           <ul>
+                <%= cl_image_tag car.photo, height: 20, width: 20, crop: :fill %>
                 <%= car.brand %>
                 <%= car.model %>
                 <%= car.color %>
       <!--      <%= car.description %>      -->
                 <%= link_to "Show car details ", car_path(car) %>
            <% end %>
-         </ol>
+           </ul>
      </table>
     </div>
   </div>
 </div>
 <!-- <h1>Put here the Footer !</h1> -->
+
+
