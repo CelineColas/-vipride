@@ -7,5 +7,6 @@ class PagesController < ApplicationController
     else
       @cars = Car.all
     end
+    @cars = Car.limit(6)
   end
 end
