@@ -5,26 +5,28 @@
   </div>
 
   <!-- Search form -->
-    <div class="text-center form-inline">
-
-      <%= form_tag("/search", method: "get") do %>
-      <%= label_tag(:q, "Search for:") %>
-      <%= text_field_tag(:q) %>
-      <%= text_field_tag(:q) %>
-      <%= text_field_tag(:q) %>
+  <div class="text-center form-inline">
+    <%= form_tag(cars_path, method: "get") do %>
+      <%= label_tag(:brand, "Search for:") %>
+      <%= text_field_tag(:brand, nil, placeholder: "Brand") %>
+      <%= text_field_tag(:model, nil, placeholder: "Model") %>
+      <%= text_field_tag(:city, nil, placeholder: "City") %>
       <%= submit_tag("Search") %><i class="fa fa-search"></i>
-      <% end %>
+    <% end %>
   </div>
 
-<!-- Car cards -->
-
-      <% @cars.each do |car| %>
-      'raise'
-        <div class="col-xs-12 col-md-4">
-          <div class="card" style="background : linear-gradient(rgba(0, 0, 0, 0.3),
-          rgba(0, 0, 0, 0.2)), <%= image_tag '@car.photo' %>
-            <%= @car.title, class: "card-name" %>
-            <%= @car.brand, class: "card-content" %>
-            <%= date_field(:user, :born_on) %>
-          </div>
-      <% end %>
+  <!-- Car cards -->
+  <% @cars.each do |car| %>
+    <div class="col-xs-12 col-md-4">
+      <%#= image_tag car.photo, class: "card" %>
+      <%= image_tag 'ferrari.jpg', class: "card" %>
+      <div class="card-name">
+        <%= car.model %>
+      </div>
+      <div class="card-content">
+        <%= car.brand %>
+      </div>
+      <%#= date_field(:user, :born_on) %>
+    </div>
+  <% end %>
+</div>

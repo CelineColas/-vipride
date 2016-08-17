@@ -12,7 +12,7 @@
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <% if user_signed_in?  %>
-          <% if user.facebook_picture_url %>
+          <% if current_user.facebook_picture_url %>
 
           <%= image_tag current_user.facebook_picture_url, height: 50, width: 50, id: "navbar-wagon-menu", class: "avatar dropdown-toggle", data: { toggle: "dropdown" } %>
           <% else %>
