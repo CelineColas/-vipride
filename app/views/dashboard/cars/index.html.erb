@@ -1,0 +1,7 @@
+<%  if @cars.empty? %>
+  <h2><%= link_to "You have no car. Wanna register your car ?" , new_dashboard_car_path %></h2>
+<%  end %>
+
+<% @cars.each do |car| %>
+<%= car.brand %> - <%= car.model %> - <%= car.color %>
+<% end %>
