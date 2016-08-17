@@ -4,14 +4,14 @@ def index
   @cars = current_user.cars
 end
 
-def show #(+route) ?
+def show
 end
 
 def new
   @car = Car.new
 end
 def create
-  @car = Car.new(cocktail_params)
+  @car = Car.new(car_params)
     if @car.save
       redirect_to car_path(@car)
     else
