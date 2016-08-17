@@ -5,58 +5,26 @@
   </div>
 
   <!-- Search form -->
-    <div class="text-center">
-      <form action="" class="search-bar form-inline">
-        <input type="text" class="navbar-wagon-search-input" placeholder="Brand">
-        <input type="text" class="navbar-wagon-search-input" placeholder="Model">
-        <input type="text" class="navbar-wagon-search-input" placeholder="City">
+    <div class="text-center form-inline">
 
-        <input type="text" class="datepicker" value id="dpd1" data-provide="datepicker-inline">
-        <input type="text" class="datepicker" value id="dpd2" data-provide="datepicker-inline">
-
-        <button type="submit" class="btn btn-default">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-    </div>
+      <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:q, "Search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= text_field_tag(:q) %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %><i class="fa fa-search"></i>
+      <% end %>
   </div>
 
 <!-- Car cards -->
-<div class="cards-wrapper">
-  <div class="container">
-    <div class="row">
 
-      <div class="col-xs-12 col-md-4">
-        <div class="card" style="background : linear-gradient(rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.2)), url('847298-luxury-wallpaper.jpg') ;">
-          <div class="card-name">Beautiful car</div>
-          <div class="card-content">
-              <p>Lorem ipsum dolor sit.</p>
+      <% @cars.each do |car| %>
+      'raise'
+        <div class="col-xs-12 col-md-4">
+          <div class="card" style="background : linear-gradient(rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.2)), <%= image_tag '@car.photo' %>
+            <%= @car.title, class: "card-name" %>
+            <%= @car.brand, class: "card-content" %>
+            <%= date_field(:user, :born_on) %>
           </div>
-        </div>
-      </div>
-
-    <div class="col-xs-12 col-md-4">
-      <div class="card" style="background : linear-gradient(rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.2)), url('847298-luxury-wallpaper.jpg');">
-        <div class="card-name">Other beautiful car</div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit.</p>
-        </div>
-      </div>
-    </div>
-
-  <div class="col-xs-12 col-md-4">
-    <div class="card" style="background : linear-gradient(rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.2)), url('847298-luxury-wallpaper.jpg');">
-      <div class="card-name">Ferrari</div>
-      <div class="card-content">
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-</div>
-</div>
+      <% end %>
