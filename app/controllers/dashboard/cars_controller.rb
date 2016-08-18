@@ -12,6 +12,7 @@ def new
 end
 def create
   @car = Car.new(car_params)
+  @car.user = current_user
     if @car.save
       redirect_to car_path(@car)
     else
@@ -19,6 +20,13 @@ def create
     end
 end
 
+def edit # VIEW
+end
+
+def update
+  @car.update(car_params)
+  redirect_to car_path(@car)
+end
 
 private
 

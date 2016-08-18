@@ -4,4 +4,5 @@
 
 <% @cars.each do |car| %>
 <%= car.brand %> - <%= car.model %> - <%= car.color %>
+<h2><%= link_to "Wanna edit ?" , edit_dashboard_car_path(car) %></h2>
 <% end %>
