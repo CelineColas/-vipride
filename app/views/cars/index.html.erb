@@ -1,26 +1,27 @@
 <!-- <h1>Put here the Header !</h1> -->
 
-<div class="text-center"> <!-- to define in CSS ! -->
+<div class="d-banner">
+ <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
- <h2>Please find herebelow all the cars for the results requested :  </h2>
+    <div class="col-xs-12">
+     <h2>Please find herebelow all the cars for the results requested :  </h2>
 
      <table class= "table">
-         <ol>
            <% @cars.each do |car| %>
            <ul>
-                <%= cl_image_tag car.photo, height: 20, width: 20, crop: :fill %>
+                <% if car.photo %>
+                <%= cl_image_tag car.photo.path, height: 35, width: 35, crop: :fill %>
+                <% end %>
                 <%= car.brand %>
                 <%= car.model %>
                 <%= car.color %>
       <!--      <%= car.description %>      -->
                 <%= link_to "Show car details ", car_path(car) %>
-           <% end %>
            </ul>
+           <% end %>
      </table>
     </div>
+   </div>
   </div>
 </div>
 <!-- <h1>Put here the Footer !</h1> -->
-
-

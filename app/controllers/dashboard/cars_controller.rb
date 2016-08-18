@@ -1,5 +1,5 @@
 class Dashboard::CarsController < ApplicationController
-
+before_action :set_car, only: [:edit, :update]
 def index
   @cars = current_user.cars
 end
@@ -25,7 +25,7 @@ end
 
 def update
   @car.update(car_params)
-  redirect_to car_path(@car)
+  redirect_to dashboard_cars_path
 end
 
 private
@@ -34,6 +34,9 @@ private
     params.require(:car).permit(:brand, :model, :color, :description, :photo)
   end
 
+  def set_car
+    @car = Car.find(params[:id])
+  end
 end
 
        #     dashboard_cars GET    /dashboard/cars(.:format)                 dashboard/cars#index

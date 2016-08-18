@@ -1,8 +1,20 @@
-<%  if @cars.empty? %>
-  <h2><%= link_to "You have no car. Wanna register your car ?" , new_dashboard_car_path %></h2>
-<%  end %>
+<div class="d-banner">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12 ">
 
-<% @cars.each do |car| %>
-<%= car.brand %> - <%= car.model %> - <%= car.color %>
-<h2><%= link_to "Wanna edit ?" , edit_dashboard_car_path(car) %></h2>
-<% end %>
+      <%  if @cars.empty? %>
+          <h2><%= link_to "You have no car. Wanna register your car ?" , new_dashboard_car_path %></h2>
+      <%  end %>
+
+      <% @cars.each do |car| %>
+        <h3> <%= car.brand %> - <%= car.model %> - <%= car.color %> </h3>
+        <% if car.photo %>
+          <%= cl_image_tag car.photo.path, height: 60, width: 60, crop: :fill %>
+        <% end %>
+        <p><%= link_to "Wanna edit ?" , edit_dashboard_car_path(car) %></p>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
