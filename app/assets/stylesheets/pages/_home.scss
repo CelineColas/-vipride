@@ -11,14 +11,12 @@
   margin: 10px;
 }
 
-input.span2, textarea.span2, .uneditable-input.span2 {
-    width: 126px;
-}
-
 .wrapper-top {
+  min-height: 400px ;
+  width:100%;
   background-image: url("images/847298-luxury-wallpaper.jpg");
   background-size: cover;
-  height:300px;
+  height:500px;
 }
 .cards-wrapper {
   padding: 60px 0;

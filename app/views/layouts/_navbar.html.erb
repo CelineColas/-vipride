@@ -22,7 +22,7 @@
 
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
 
-          <li><a href="dashboard_profile_path">My dashboard</a></li>
+          <li><%= link_to "My dashboard" , dashboard_profile_path %></li>
           <li><%= link_to "Log Out" , destroy_user_session_path, method: :delete %></li>
 
         </ul>
@@ -31,12 +31,15 @@
 
     <!-- Buttons (call-to-action) -->
     <div class="buttons">
-      <a href="" class="navbar-wagon-item btn btn-danger btn-lg">Sign up</a>
-    </div>
+      <div class="navbar-wagon-item btn btn-danger btn-lg">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn-sign" %>
+      </div>
 
-    <a href="" class="navbar-wagon-item btn btn-primary btn-lg">Log in</a>
+      <div class="navbar-wagon-item btn btn-primary btn-lg">
+        <%= link_to "Log in",  new_user_session_path, class: "btn-log" %>
+      </div>
+    </div>
   </div>
-</div>
 
 <!-- Dropdown appearing on mobile only -->
 <div class="navbar-wagon-item hidden-md hidden-lg">
