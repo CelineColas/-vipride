@@ -6,13 +6,13 @@ class Dashboard::BookingsController < ApplicationController
   end
 
   def approve
-     @booking.status = "approved"
+     @booking.status = "Accepted"            # as soon as the owner approves a booking, the status changes to Accepted"
      @booking.save!
      redirect_to dashboard_bookings_path
   end
 
   def reject
-     @booking.status = "rejected"
+     @booking.status = "Rejected"           # as soon as the owner approves a booking, the status changes to Rejected"
      @booking.save!
      redirect_to dashboard_bookings_path
   end
