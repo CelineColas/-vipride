@@ -2,9 +2,13 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+h1{
+  margin:0;
+  padding:20px;
+}
 .search-bar {
   padding: 30 30px;
-  margin: 70px;
+  margin: 60px;
 }
 
 .search-bar > input {
@@ -12,18 +16,24 @@
 }
 
 .wrapper-top {
+  margin: auto;
+  height: 600px;
   width:100%;
-  background-image: url("images/847298-luxury-wallpaper.jpg");
-  background-size: cover;
+  background-image: image-url("background-img.jpg");
+  background-size:cover;
 }
-.cards-wrapper {
-  padding: 60px 0;
+
+.wrapper-bottom{
+  min-height:100em;
+  padding: 60px ;
   background-color: #F4F4F4;
-  background-size: cover;
-  display: flex;
-  height: 900px;
-  width: 100%;
+  // background-size: cover;
+
+  .car-card {
+    margin-bottom: 2em;
+  }
 }
+
 
 .card {
   position: relative;
@@ -34,21 +44,20 @@
   margin: 0 auto;
   background-size: cover;
   flex: 0 1 auto;
-  background : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2))
-}
+  // background : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2))
+  // Where do I put this fu***** shit?
 
   .card-name {
-  position: absolute;
-  font-size: 25px;
-  font-weight: bold;
-  top: 10px;
-  left: 10px;
-  display: block;
-}
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    top: 10px;
+    left: 10px;
+  }
 
-.card-content {
-  position: absolute;
-  bottom: 5px;
-  left: 10px;
-  display: block;
+  .card-content {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+  }
 }

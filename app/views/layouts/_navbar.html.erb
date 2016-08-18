@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <img src="https://unsplash.it/50x50" />
+    <%= image_tag ('logo.png') %>
   </a>
 
   <!-- Right Navigation -->
@@ -16,7 +16,7 @@
 
           <%= image_tag current_user.facebook_picture_url, height: 50, width: 50, id: "navbar-wagon-menu", class: "avatar dropdown-toggle", data: { toggle: "dropdown" } %>
           <% else %>
-            <%= image_tag 'profile_img.png', height: 50, width: 50, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: { toggle: "dropdown" } %>
+            <%= image_tag 'profile_img.png', height: 40, width: 40, class: "avatar-large dropdown-toggle", id: "navbar-wagon-menu", data: { toggle: "dropdown" } %>
           <% end %>
         <% end %>
 
@@ -31,12 +31,12 @@
 
     <!-- Buttons (call-to-action) -->
     <div class="buttons">
-      <div class="navbar-wagon-item btn btn-danger btn-lg">
-        <%= link_to "Sign up", new_user_registration_path, class: "btn-sign" %>
+      <div class="navbar-wagon-item btn">
+      <%= link_to "Sign up", new_user_registration_path, class: "btn-sign btn-danger btn-lg" %>
       </div>
 
-      <div class="navbar-wagon-item btn btn-primary btn-lg">
-        <%= link_to "Log in",  new_user_session_path, class: "btn-log" %>
+      <div class="navbar-wagon-item btn">
+        <%= link_to "Log in",  new_user_session_path, class: "btn-log btn-primary btn-lg" %>
       </div>
     </div>
   </div>

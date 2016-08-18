@@ -3,21 +3,17 @@
   background: #333333;
   padding: 20px 0;
   color: #CCCCCC;
-  position:absolute;
-  left : 0;
-  right: 0;
-  bottom: 0;
-  width:100%;
 }
+
 #footer p {
-  margin-top: 17px;
+  margin-top: 10px;
 }
 #footer ul {
   margin-top: 10px;
 }
 #footer a {
-  color: #B5B5B5;
-  font-size: 30px;
+  color: $gray-light;
+  font-size: 20px;
   letter-spacing: 20px;
   transition: color 0.5s ease;
 }
