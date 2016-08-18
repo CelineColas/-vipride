@@ -1,13 +1,12 @@
 
-<div class="text-center">
+<div class="profile-show text-center">
 
     <h1><%= @user.name %></h1>
 
     <% if @user.photo? %>
-      <%= cl_image_tag @user.photo.path, width: 150, height: 150, crop: :fill %>
+      <%= cl_image_tag @user.photo.path, width: 150, height: 150, crop: :fill, class: "profile-pic" %>
     <% end %>
 
-    <%= @user.name %>
     <%= @user.address %>
 
     <%= link_to 'Edit profile', edit_dashboard_profile_path, class: "btn btn-info" %>
