@@ -1,0 +1,23 @@
+ // .d-cars{
+ //  padding: 30 30px;
+ //  margin: 50px;
+ //  background-image: url("images/847298-luxury-wallpaper.jpg");
+ //  background-size: cover;
+ //  height:300px;
+ // }
+
+.d-banner {
+  background-image: image-url('847298-luxury-wallpaper.jpg');
+  // background: ;
+  color: white;
+  // text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input{
+    color: black;
+  }
+}
