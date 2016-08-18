@@ -1,47 +1,33 @@
 <div class="wrapper-top">
   <div class="text-center">
     <h1>VipRide</h1>
-    <h4>Click on it, drive it !</h4>
+    <h3>Click on it, drive it !</h3>
   </div>
 
-  <!-- Search form -->
-<!--     <div class="text-center">
-      <form action="/" class="search-bar form-inline">
-        <input type="text" name="brand" class="navbar-wagon-search-input" placeholder="Brand">
-        <!-- name brand to be modified by Celine - from Cedric -->
-        <!-- <input type="text" class="navbar-wagon-search-input" placeholder="Model"> -->
-        <!-- <input type="text" class="navbar-wagon-search-input" placeholder="City"> -->
-
-        <!-- <input type="text" class="datepicker" value id="dpd1" data-provide="datepicker-inline"> -->
-        <!-- <input type="text" class="datepicker" value id="dpd2" data-provide="datepicker-inline"> -->
-
-        <!-- <button type="submit" class="btn btn-default"> -->
-          <!-- <i class="fa fa-search"></i> -->
-        <!-- </button> -->
-      <!-- </form> -->
-   <!-- </div>  -->
-  <div class="text-center form-inline">
+  <div class="text-center form-inline search-bar">
     <%= form_tag(cars_path, method: "get") do %>
-      <%= label_tag(:brand, "Search for:") %>
-      <%= text_field_tag(:brand, nil, placeholder: "Brand") %>
-      <%= text_field_tag(:model, nil, placeholder: "Model") %>
-      <%= text_field_tag(:city, nil, placeholder: "City") %>
-      <%= submit_tag("Search") %><i class="fa fa-search"></i>
+    <%= label_tag(:brand, "Search for:") %>
+    <%= text_field_tag(:brand, nil, placeholder: "Brand") %>
+    <%= submit_tag("Search") %>
     <% end %>
   </div>
+</div>
 
-  <!-- Car cards -->
+<!-- Car cards -->
+<div class="wrapper-bottom">
+  <div class="row">
   <% @cars.each do |car| %>
-    <div class="col-xs-12 col-md-4">
-      <%#= image_tag car.photo, class: "card" %>
-      <%= image_tag 'ferrari.jpg', class: "card" %>
+    <div class="col-xs-12 col-md-6 col-lg-4 car-card">
+      <% if car.photo %>
+      <%= cl_image_tag car.photo.fullpath, class: "card" %>
+      <% end %>
       <div class="card-name">
-        <%= car.model %>
-      </div>
-      <div class="card-content">
         <%= car.brand %>
       </div>
-      <%#= date_field(:user, :born_on) %>
+      <div class="card-content">
+        <%= car.model %>
+      </div>
     </div>
   <% end %>
+  </div>
 </div>
