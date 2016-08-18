@@ -1,47 +1,48 @@
 
-  <div class="dashboard">
+<div class="dashboard">
 
-  <div class="container">
-      <div class="row">
-        <div id="data" class="col-sm-7">
-            <h2>Manage bookings</h2>
+<div class="container">
+    <div class="row">
+      <div id="data" class="col-sm-7">
+          <h2 class = "sky">Manage bookings</h2>
 
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>User</th>
-                  <th>Car</th>
-                  <th>Message</th>
-                  <th>Start_date - end_date</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Car</th>
+                <th>Message</th>
+                <th>Start_date - end_date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
 
-              <tbody class="split" >
+            <tbody class="split" >
 
-                <% @bookings.each do |booking| %>
-                <tr>
-                  <td> <%= current_user.name %></td>
-                  <td> <%= booking.id %> </td>
-                  <td> <%= booking.message %> </td>
-                  <td> <%= booking.start_date %> / <%= booking.end_date %> </td>
-                  <td><%= booking.status %></td>
-                  <td>
-                  <p>
-                    <span class="label label-default">Pending</span>
-                    <span class="label label-success">Accept</span>
-                    <span class="label label-danger">Reject</span>
-                  </p>
+              <% @bookings.each do |booking| %>
+              <tr>
+                <td> <%= current_user.name %></td>
+                <td> <%= booking.id %> </td>
+                <td> <%= booking.message %> </td>
+                <td> <%= booking.start_date %> / <%= booking.end_date %> </td>
+                <td><%= booking.status %></td>
+                <td>
+                <p>
 
-                  </td>
-                 <% end %>
-                 </tr>
+                  <%if booking.status == Pending%>
+                  <span class="label label-success">Accept</span>
+                  <span class="label label-danger">Reject</span>
+                </p>
 
-              </tbody>
-            </table>
-        </div>
-    </div>
+                </td>
+               <% end %>
+               </tr>
+
+            </tbody>
+          </table>
+      </div>
   </div>
-  </div>
+</div>
+</div>
 
