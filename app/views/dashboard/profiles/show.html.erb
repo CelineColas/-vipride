@@ -1,16 +1,25 @@
-
-<div class="profile-show text-center">
-
-    <h1><%= @user.name %></h1>
-
+<div class="banner">
+  <div class="image">
     <% if @user.photo? %>
-      <%= cl_image_tag @user.photo.path, width: 150, height: 150, crop: :fill, class: "profile-pic" %>
+    <%= cl_image_tag @user.photo.path, width: 250, height: 250, crop: :fill, class: "profile-pic" %>
     <% end %>
-
-    <%= @user.address %>
-
-    <%= link_to 'Edit profile', edit_dashboard_profile_path, class: "btn btn-info" %>
-
-
+  </div>
+  <div class="content">
+    <div class="title">
+      <h2>
+        <%= @user.name %>
+      </h2>
+    </div>
+    <div class="info">
+      <%= @user.address %>
+      <%= link_to 'Edit profile', edit_dashboard_profile_path, class: "btn btn-info" %>
+    </div>
+    <div class="introduction">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quibusdam, repellat debitis velit, reprehenderit nisi! Facilis explicabo cumque similique consectetur sunt quibusdam dignissimos quasi reiciendis perferendis sequi optio at dolor recusandae odio voluptas molestiae, aperiam veniam impedit, voluptatibus tempore cum facere laudantium odit a. Quidem consequuntur, natus illum? Totam eos asperiores saepe natus culpa nulla officia modi odio, porro deleniti, consequatur harum illum quo debitis pariatur nostrum eius est, placeat alias sed dignissimos temporibus perferendis ipsum! Repudiandae debitis cupiditate nihil sed, adipisci beatae minima placeat tenetur nisi. Vel, culpa, laudantium. Commodi, quia architecto quas sed, exercitationem reiciendis ipsam nihil provident minus, dolorum eveniet voluptates autem esse ipsum itaque fugiat sequi libero! Enim omnis excepturi voluptatum quaerat voluptas nulla vero provident aperiam recusandae eos itaque atque explicabo eaque reprehenderit assumenda impedit facere sint, repellendus nobis similique? Eos ab nostrum labore eum voluptates, dolore beatae, tenetur natus, optio est provident? Ducimus tenetur facilis eveniet, dolores, sequi qui. Laudantium eius impedit maxime perspiciatis dolore quos nisi quisquam, eum atque aut ipsum necessitatibus minus est consequuntur id, totam, tenetur sapiente minima. Vitae quaerat, illum fugiat beatae magni officiis ipsa dignissimos quas sit itaque aliquam, non dolores optio totam hic odit accusantium odio id ipsum.
+    </div>
+  </div>
 </div>
+<div class="sidebar"></div>
+
+
 
