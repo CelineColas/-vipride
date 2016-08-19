@@ -6,36 +6,45 @@
       <div id="data" class="col-sm-7">
           <h2 class = "sky">Manage bookings</h2>
 
-          <table class="table">
+          <table class="tableone">
             <thead>
               <tr>
-                <th>User</th>
-                <th>Car</th>
-                <th>Message</th>
-                <th>Start_date - end_date</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th class = "cellone">User</th>
+                <th class = "cellone">Car</th>
+                <th class = "cellone">Message</th>
+                <th class = "cellone">Start_date - end_date</th>
+                <th class = "cellone">Status</th>
               </tr>
             </thead>
 
             <tbody class="split" >
 
               <% @bookings.each do |booking| %>
-              <tr>
-                <td> <%= current_user.name %></td>
-                <td> <%= booking.id %> </td>
-                <td> <%= booking.message %> </td>
-                <td> <%= booking.start_date %> / <%= booking.end_date %> </td>
-                <td><%= booking.status %></td>
-                <td>
-                <p>
+                <% if booking.status == "Pending" || "Accepted"%>
+                <tr>
+                  <td class = "celltwo"> <%= current_user.name %></td>
+                  <td class = "celltwo"> <%= booking.id %> </td>
+                  <td class = "celltwo"> <%= booking.message %> </td>
+                  <td class = "celltwo"> <%= booking.start_date %> / <%= booking.end_date %> </td>
+                  <td class = "celltwo">
+                    <p>
+                      <% if booking.status == "Pending" %>
 
-                  <%if booking.status == "Pending" && "Accepted"%>
-                  <span class="label label-success">Accept</span>
-                  <span class="label label-danger">Reject</span>
-                </p>
+                        <%= link_to approve_dashboard_booking_path(booking), method: :patch do %>
+                        <button class="btn btn-success"> Accept</button>
+                        <%end%>
 
-                </td>
+                        <%= link_to reject_dashboard_booking_path(booking), method: :patch do %>
+                        <button class="btn btn-warning"> Reject</button>
+                        <%end%>
+                      <%else %>
+                        <%= booking.status %>
+
+                      <%end%>
+
+                    </p>
+
+                  </td>
                <% end %>
                </tr>
              <% end %>
