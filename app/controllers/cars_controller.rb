@@ -12,7 +12,21 @@ class CarsController < ApplicationController
   end
 
   def show
-    # car GET    /cars/:id(.:format)                       cars#show
+     # car GET    /cars/:id(.:format)                       cars#show
+  end
+
+  def new
+    @car = Car.new
+  end
+
+  def create
+    @car = Car.save(car_params[:car])
+    if @car.save
+      # @car = params[:brand][:model].titleize
+      redirect_to car_path(@car)
+    else
+      render :new
+    end
   end
 
   private

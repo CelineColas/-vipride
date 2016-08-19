@@ -1,23 +1,36 @@
- // .d-cars{
- //  padding: 30 30px;
- //  margin: 50px;
- //  background-image: url("images/847298-luxury-wallpaper.jpg");
- //  background-size: cover;
- //  height:300px;
- // }
+.wrapper{
+  padding: 40px;
+  background-color: #F4F4F4;
+  // background-size: cover;
 
-.d-banner {
-  background-image: image-url('847298-luxury-wallpaper.jpg');
-  // background: ;
-  color: white;
-  // text-align: center;
-  height: 100vh;
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  input{
-    color: black;
+  .car-card {
+    margin-bottom: 2em;
   }
+}
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 350px;
+  border-radius: 9px;
+  color: white;
+  margin: 0 auto;
+  background-size: cover;
+  flex: 0 1 auto;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+}
+
+.list-title {
+  padding: 20px;
+}
+
+.edit-link {
+  position:absolute;
+  bottom:9px;
+  right: 45px;
 }
