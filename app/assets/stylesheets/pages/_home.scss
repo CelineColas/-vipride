@@ -8,7 +8,14 @@
   font-weight:bold;
   font-family:$header-font;
   letter-spacing: 1px;
+  font-size: 48px;
+
 }
+
+.white-el{
+  color: $gray-lighter;
+}
+
 .search-bar {
   padding: 30 30px;
   margin: 60px;
@@ -52,6 +59,7 @@
     position: absolute;
     bottom: 5px;
     left: 10px;
+    color:white;
   }
 
 }
