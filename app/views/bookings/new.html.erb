@@ -1,9 +1,10 @@
 <div class = "deco">
 
-  <div class = "book">
-    <div class = cool>
+  <div class = "container">
+    <div class = "book">
+    <div class="cool">
     <%= image_tag "car.png"%>
-    </div>
+</div>
     <%= simple_form_for [:car, @booking] do |f| %>
       <%= f.input :message %>
       <%= f.input :start_date %>
@@ -12,5 +13,5 @@
       <%= f.button :submit %>
     <%end %>
   </div>
-
+   </div>
 </div>
