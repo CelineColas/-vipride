@@ -30,7 +30,7 @@
                 <td>
                 <p>
 
-                  <%if booking.status == Pending%>
+                  <%if booking.status == "Pending" && "Accepted"%>
                   <span class="label label-success">Accept</span>
                   <span class="label label-danger">Reject</span>
                 </p>
@@ -38,6 +38,7 @@
                 </td>
                <% end %>
                </tr>
+             <% end %>
 
             </tbody>
           </table>
