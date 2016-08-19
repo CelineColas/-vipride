@@ -1,21 +1,29 @@
-<%= simple_form_for(@user, url: dashboard_profile_path) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li> Invalid input </li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <!-- [...] all the fields -->
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.input :photo, as: :attachinary %>
 
-  <%= f.label :address %>
-  <%= f.text_field :address %>
+  <div class="edit-box">
+    <%= simple_form_for(@user, url: dashboard_profile_path) do |f| %>
+        <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li> Invalid input </li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-  <%= f.submit %>
-<% end %>
+      <div class="form-inputs edit-form">
+        <%= f.input :name %>
+
+        <%= f.input :photo, as: :attachinary %>
+
+        <%= f.input :address %>
+
+        <div class="form-actions">
+          <%= f.submit "Edit", class: "signup-btn btn-success"  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
