@@ -1,10 +1,8 @@
-<!-- <h1>Put here the Header !</h1> -->
-
-<div class="d-banner">
+<!-- <div class="d-banner">
  <div class="container">
   <div class="row">
     <div class="col-xs-12">
-     <h2>Please find herebelow all the cars for the results requested :  </h2>
+     <h3 class="text-center list-title">Results for your request</h3>
 
      <table class= "table">
            <% @cars.each do |car| %>
@@ -12,16 +10,28 @@
                 <% if car.photo %>
                 <%= cl_image_tag car.photo.path, height: 35, width: 35, crop: :fill %>
                 <% end %>
-                <%= car.brand %>
-                <%= car.model %>
-                <%= car.color %>
+ -->                <%= car.brand %> <%= car.model %> - <%= car.color %>
       <!--      <%= car.description %>      -->
                 <%= link_to "Show car details ", car_path(car) %>
            </ul>
-           <% end %>
+<!--            <% end %>
      </table>
     </div>
    </div>
   </div>
+</div> -->
+
+<div class="wrapper-bottom">
+  <div class="row">
+  <% @cars.each do |car| %>
+    <div class="col-xs-12 col-md-6 col-lg-4 car-card">
+      <% if car.photo %>>
+      <%= cl_image_tag car.photo.path, height: 35, width: 35, crop: :fill, class: "card" %>
+      <% end %>
+      <div class="card-content">
+        <%= car.model %>
+      </div>
+    </div>
+  <% end %>
+  </div>
 </div>
-<!-- <h1>Put here the Footer !</h1> -->

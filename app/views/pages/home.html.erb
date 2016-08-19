@@ -1,6 +1,6 @@
 <div class="wrapper-top">
   <div class="text-center">
-    <h1>VipRide</h1>
+    <h1 id="title">VipRide</h1>
     <h3>Click on it, drive it !</h3>
   </div>
 
@@ -19,7 +19,9 @@
   <% @cars.each do |car| %>
     <div class="col-xs-12 col-md-6 col-lg-4 car-card">
       <% if car.photo %>
+      <%= link_to car_path(car) do %>
       <%= cl_image_tag car.photo.fullpath, class: "card" %>
+      <% end %>
       <% end %>
       <div class="card-name">
         <%= car.brand %>

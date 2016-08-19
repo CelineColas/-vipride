@@ -2,7 +2,7 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
-h1{
+#title{
   margin:0;
   padding:20px;
 }
@@ -24,7 +24,6 @@ h1{
 }
 
 .wrapper-bottom{
-  min-height:100em;
   padding: 60px ;
   background-color: #F4F4F4;
   // background-size: cover;
