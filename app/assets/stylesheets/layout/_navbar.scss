@@ -24,7 +24,7 @@
 .buttons {
   flex: 0 1 auto;
   padding: 20px;
-  margin: 0 20px;
+  margin: 0 20 0 0px;
   cursor: pointer;
 }
 
@@ -75,3 +75,9 @@
   color: $gray-lighter;
   text-decoration: none;
 }
+
+.user_name{
+  padding-left: 3px;
+}
+
+

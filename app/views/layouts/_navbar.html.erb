@@ -13,10 +13,14 @@
       <div class="dropdown">
         <% if user_signed_in?  %>
           <% if current_user.facebook_picture_url %>
-
-          <%= image_tag current_user.facebook_picture_url, height: 50, width: 50, id: "navbar-wagon-menu", class: "avatar dropdown-toggle", data: { toggle: "dropdown" } %>
+            <%= image_tag current_user.facebook_picture_url, height: 50, width: 50, id: "navbar-wagon-menu", class: "avatar dropdown-toggle", data: { toggle: "dropdown" } %>
+          <% elsif current_user.photo %>
+            <%= cl_image_tag current_user.photo.path, height: 40, width: 40, class: "avatar-large dropdown-toggle", id: "navbar-wagon-menu", data: { toggle: "dropdown" } %>
           <% else %>
             <%= image_tag 'profile_img.png', height: 40, width: 40, class: "avatar-large dropdown-toggle", id: "navbar-wagon-menu", data: { toggle: "dropdown" } %>
+          <% end %>
+          <% if current_user.name %>
+          <span class="user_name"><%= current_user.name %></span>
           <% end %>
         <% end %>
 
