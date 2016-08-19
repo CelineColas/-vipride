@@ -1,22 +1,23 @@
 h2 {
-  ;
-}
-
-.form-inputs {
-  ;
+  font-family: Open-sans, sans-serif;
 }
 
 .awesome-article {
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 30px;
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
     max-width: 935px;
     width: 25%;
-    background-color: #DCDCDC;
-    font-family: arial;
+    background-color: #F6F6F6;
+    font-family: Open-sans, sans-serif;
+    padding-top: 2px;
+    padding-bottom: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-color: #3D3D3A;
 }
 
 .login-box {
@@ -24,13 +25,66 @@ h2 {
     flex-grow: 1;
     justify-content: center;
     margin-top: 12px;
+    margin-bottom: 12px;
     max-width: 350px;
+}
+
+.login-style {
+    padding: 10px;
+    border-radius: 2pt;
+    border: none;
+    margin: 10px;
+    font-size: 12pt;
+    border-radius: 20%;
 }
 
 .form-inputs {
     padding-bottom: 5px;
+    font-size: 20px;
 }
 
-.style-form {
 
+
+// .form-actions {
+//   color: white;
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   width: 250px;
+//   font-weight: bold;
+// }
+
+.login-btn {
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  width: 250px;
+  font-weight: bold;
+}
+
+.second-box {
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 935px;
+    width: 25%;
+    background-color: #F6F6F6;
+    font-family: Open-sans, sans-serif;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    border-color: #3D3D3A;
+}
+
+.fa {
+  padding-top: 6px;
+}
+
+.remember {
+  font-size: 100px;
+}
+
+.boolean_optional{
+  font-size: 5px;
 }

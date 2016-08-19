@@ -1,9 +1,16 @@
-<form action = “/bookings”, method= “post” >
-<label for = “message”> Message: </label>
-<input type = “text” message = booking[message] id= “message”>
-<input date_start>
-<input date_end>
-<input car_id>
-<input user_id>
-<input type submit>
-</form>
+<div class = "deco">
+
+  <div class = "book">
+    <div class = cool>
+    <%= image_tag "car.png"%>
+    </div>
+    <%= simple_form_for [:car, @booking] do |f| %>
+      <%= f.input :message %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+
+      <%= f.button :submit %>
+    <%end %>
+  </div>
+
+</div>
