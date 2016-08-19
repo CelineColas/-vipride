@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.car_id = params[:car_id]       # we assing the car id to the booking through the params
     @booking.status = "Pending"             # we assign a default state at the status, which shoul match the validations
     @booking.save!
-    redirect_to dashboard_bookings_path     # we redirect back to the dashboard
+    redirect_to root_path     # we redirect back to the dashboard
   end
 
   private
