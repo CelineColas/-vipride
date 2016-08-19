@@ -5,6 +5,9 @@
 #title{
   margin:0;
   padding:20px;
+  font-weight:bold;
+  font-family:$header-font;
+  letter-spacing: 1px;
 }
 .search-bar {
   padding: 30 30px;
@@ -19,8 +22,9 @@
   margin: auto;
   height: 600px;
   width:100%;
-  background-image: image-url("background-img.jpg");
   background-size:cover;
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.15) 0%, rgba(0,36,61,0.3) 50%), image-url('background-img.jpg');
+
 }
 
 .wrapper-bottom{
@@ -42,13 +46,12 @@
   margin: 0 auto;
   background-size: cover;
   flex: 0 1 auto;
-  // background : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2))
   // Where do I put this fu***** shit?
 
   .card-content {
-    color:white;
     position: absolute;
     bottom: 5px;
     left: 10px;
   }
+
 }
