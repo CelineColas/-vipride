@@ -1,17 +1,23 @@
 <div class = "deco">
+<div class="picture-booking">
+  <%= image_tag "Dom.png"%>
+</div>
 
   <div class = "container">
     <div class = "book">
-    <div class="cool">
-    <%= image_tag "car.png"%>
-</div>
-    <%= simple_form_for [:car, @booking] do |f| %>
-      <%= f.input :message %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
+      <div class="cool">
+        <%= image_tag "car.png"%>
+      </div>
+        <%= simple_form_for [:car, @booking] do |f| %>
+        <%= f.input :message, label: 'Message' , placeholder: 'Write your message here' %>
+        <%= f.input :start_date, placeholder: 'Enter your start date' %>
+        <%= f.input :end_date, placeholder: 'Enter your End date' %>
 
-      <%= f.button :submit %>
-    <%end %>
-  </div>
+        <%= f.button :submit %>
+        <%end %>
+    </div>
+   <div class="returnback">
+      <%= link_to 'back', cars_path %>
    </div>
+  </div>
 </div>

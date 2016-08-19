@@ -16,3 +16,10 @@
 
 @import "bookings/index";
 @import "dashboard/bookings/index";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}

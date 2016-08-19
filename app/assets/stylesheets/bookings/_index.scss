@@ -1,7 +1,7 @@
 .deco {
   background-image: image-url("fire.jpg");
   height: 79vh;
-
+  display:flex;
 }
 
 .img {
@@ -9,20 +9,26 @@
 }
 
 .book {
-
+  font-family: Open Sans;
   background-color: #C1C1C2;
   border: none;
-  padding: 16px 32px;
+  padding: 16px 15px;
   text-decoration: none;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 80px;
+  margin-left: 80px;
   margin-top: 20px;
   cursor: pointer;
   border-radius: 20px;
+  opacity: 0.9;
 }
 
 .cool{
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
+.returnback {
+  margin: 0px 100px;
+  color: white;
+  font-size: 15px;
+}

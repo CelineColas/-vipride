@@ -1,9 +1,15 @@
 .dashboard{
-  // background-color: brown;
   background-image: image-url("greyshells.jpg");
-  background-attachment: scroll;
-  background-size: 100%;
-  height: 650px;
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+z-index: -1;
+}
+
+.dashboard-wrapper {
+  flex: 1 0 auto;
 }
 
 .tableone {
@@ -11,6 +17,9 @@
   border: 2px, solid, black;
   align-items: center;
   color: black;
+  margin: 0 auto;
+  font-family: Open Sans;
+  box-shadow: 0 1px 2px #d1d1d1;
 }
 
 .split {
@@ -28,11 +37,16 @@
 }
 
 .celltwo {
- border: 2px solid black;
+ border: 2px dotted grey;
  border-radius: 1px;
+ padding: 4px;
 }
 
 .sky {
+  font-family: Open Sans;
+  font-size: 25px;
+  width: 300px ;
+  margin: 30px auto;
   opacity: 0.8;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -42,4 +56,11 @@
   background-size: 100%;
   border-radius: 10px;
   color: black;
+  box-shadow: 0 1px 2px #d1d1d1;
+}
+
+.return {
+  margin: 0px 500px;
+  color: white;
+  font-size: 15px;
 }
