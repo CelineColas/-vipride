@@ -39,22 +39,14 @@
   height: 200px;
   width: 350px;
   border-radius: 9px;
-  color: white;
   margin: 0 auto;
   background-size: cover;
   flex: 0 1 auto;
   // background : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2))
   // Where do I put this fu***** shit?
 
-  .card-name {
-    position: absolute;
-    font-size: 25px;
-    font-weight: bold;
-    top: 10px;
-    left: 10px;
-  }
-
   .card-content {
+    color:white;
     position: absolute;
     bottom: 5px;
     left: 10px;
