@@ -1,14 +1,17 @@
-<h1>The car : <%= @car.brand %> - <%= @car.model %> - <%= @car.color %> </h1>
-<h2>Description : <%= @car.description %></h2>
+<div class="wrapper-bottom">
+<h1 class="text-center">Your car is ... <%= @car.brand %> <%= @car.model %></h1>
 
+<h4>Color</h4>
+<p><%= @car.color %></p>
+
+<br>
+<h4 class="car-description">Description</h4>
+<p><%= @car.description %></p>
+
+<br>
 <%#= image_tag @car.photo.url(:bright_face) %>
 
-<br>
-<%= link_to "Book the car", new_car_booking_path(@car) %>
-<br>
-<%= link_to "Back", cars_path %>
-
-<h2>More photos : </h2>
+<h4>More photos here </h4>
   <table class= "table">
    <ol>
      <%# @car.photo.each do |pic| %>
@@ -17,4 +20,7 @@
    </ol>
   </table>
 
-  <!-- BUtton !! -->
+<%= link_to "Book the car", new_car_booking_path(@car), class: "btn-log btn-success btn-lg" %>
+
+<%= link_to "Back", cars_path, class: "btn-log btn-primary btn-lg" %>
+</div>

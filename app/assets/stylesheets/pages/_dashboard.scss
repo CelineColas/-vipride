@@ -6,19 +6,44 @@
  //  height:300px;
  // }
 
-.d-banner {
-  // padding: 30px;
-  background-image: image-url('847298-luxury-wallpaper.jpg');
-  // background: ;
-  color: white;
-  // text-align: center;
-  height: 100vh;
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  input{
-    color: white;
+.wrapper{
+  padding: 40px;
+  background-color: #F4F4F4;
+  // background-size: cover;
+
+  .car-card {
+    margin-bottom: 2em;
   }
 }
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 350px;
+  border-radius: 9px;
+  color: white;
+  margin: 0 auto;
+  background-size: cover;
+  flex: 0 1 auto;
+}
+
+.card-name {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.list-title {
+  padding: 20px;
+}
+
+  .

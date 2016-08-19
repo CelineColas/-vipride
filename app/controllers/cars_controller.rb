@@ -22,7 +22,7 @@ class CarsController < ApplicationController
   def create
     @car = Car.save(car_params[:car])
     if @car.save
-      @car = params[:brand][:model].titleize
+      # @car = params[:brand][:model].titleize
       redirect_to car_path(@car)
     else
       render :new

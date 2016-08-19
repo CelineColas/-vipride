@@ -1,37 +1,19 @@
-<!-- <div class="d-banner">
- <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-     <h3 class="text-center list-title">Results for your request</h3>
+ <div class="wrapper"> 
+ <h3 class="text-center list-title">Results for your request</h3>
 
-     <table class= "table">
-           <% @cars.each do |car| %>
-           <ul>
-                <% if car.photo %>
-                <%= cl_image_tag car.photo.path, height: 35, width: 35, crop: :fill %>
-                <% end %>
- -->                <%= car.brand %> <%= car.model %> - <%= car.color %>
-      <!--      <%= car.description %>      -->
-                <%= link_to "Show car details ", car_path(car) %>
-           </ul>
-<!--            <% end %>
-     </table>
-    </div>
-   </div>
-  </div>
-</div> -->
-
-<div class="wrapper-bottom">
   <div class="row">
-  <% @cars.each do |car| %>
+    <% @cars.each do |car| %>
     <div class="col-xs-12 col-md-6 col-lg-4 car-card">
-      <% if car.photo %>>
-      <%= cl_image_tag car.photo.path, height: 35, width: 35, crop: :fill, class: "card" %>
+      <% if car.photo %>
+      <%= link_to car_path(car) do %>
+      <%= cl_image_tag car.photo.fullpath, height: 35, width: 35, crop: :fill, class: "card" %>
+      <% end %>
       <% end %>
       <div class="card-content">
-        <%= car.model %>
+        <%= car.brand %> <%= car.model %> - <%= car.color %>
       </div>
     </div>
-  <% end %>
+    <% end %>
   </div>
-</div>
+  </div>
+
