@@ -1,0 +1,83 @@
+
+.photo-style{
+  text-decoration: none;
+}
+
+.edit-box {
+  color: #262626;
+  background-color: #e8e7e7;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 4pt;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  max-width: 500px;
+}
+
+.form-inputs {
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.form-group{
+
+}
+
+.edit-form {
+  .attachinary {
+    input {
+      font-size: 13px;
+      display: inline;
+      padding-left: 109px;
+    }
+    ul {
+      padding-left: 163px;
+      padding-top: 15px;
+      padding-bottom: 20px;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      font-size: 14px;
+    }
+  }
+  .required {
+    display: flex;
+    label {
+      font-size: 14pt;
+      width: 255px;
+      font-family: Open-sans, sans-serif;
+    }
+
+  }
+  .form-actions {
+  }
+}
+
+label.attachinary.optional.control-label {
+  font-size: 18px;
+  font-weight: 530;
+}
+
+.edit-btn{
+    border-radius: 6px;
+    width: 461px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+label.string.required.control-label{
+  font-size: 18px;
+  font-weight: 530;
+}
+
+label.text.required.control-label{
+  font-size: 18px;
+  font-weight: 530;
+}
+

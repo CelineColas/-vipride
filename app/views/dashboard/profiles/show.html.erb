@@ -6,9 +6,9 @@
   </div>
   <div class="content">
     <div class="title">
-      <h2>
+      <h1>
         <%= @user.name %>
-      </h2>
+      </h1>
     </div>
     <div class="info">
       <%= @user.address %>
@@ -19,7 +19,7 @@
     </div>
       <div class="manage">
         <%= link_to 'Manage my bookings', dashboard_bookings_path, class: "manage_bookings btn-success"%>
-        <%= link_to 'Manage my cars', dashboard_bookings_path, class: "manage_cars btn-success"%>
+        <%= link_to 'Manage my cars', dashboard_cars_path, class: "manage_cars btn-success"%>
       </div>
   </div>
 </div>

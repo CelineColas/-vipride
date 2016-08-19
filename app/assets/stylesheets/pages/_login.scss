@@ -1,4 +1,4 @@
-h2 {
+h3 {
   font-family: Open-sans, sans-serif;
 }
 
@@ -57,7 +57,7 @@ h2 {
   color: white;
   margin-top: 0px;
   margin-bottom: 5px;
-  width: 250px;
+  width: 254px;
   font-weight: bold;
 }
 
@@ -87,4 +87,8 @@ h2 {
 
 .boolean_optional{
   font-size: 5px;
+}
+
+label.boolean.optional{
+  font-size: 16px;
 }
